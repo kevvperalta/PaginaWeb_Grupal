@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Si todo está correcto
-    alert("Inicio de sesión exitoso ✅");
+    alert("Inicio de sesión exitoso");
     form.reset(); // Limpia el formulario
   });
 });
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Si todo está correcto
-    alert("✅ Registro exitoso. ¡Bienvenido " + nombre + "!");
+    alert("Registro exitoso. ¡Bienvenido " + nombre + "!");
     form.reset(); // Limpia el formulario
   });
 });
