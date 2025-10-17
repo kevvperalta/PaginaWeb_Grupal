@@ -4,66 +4,55 @@ document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById("form-login");
 
   form.addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita el envío automático del formulario
+    event.preventDefault(); //Evita el envio automático del formulario
 
     const correo = form.correo.value.trim();
     const password = form.password.value.trim();
 
-    // Validación del correo electrónico
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    //Validación del correo electronico
 
     if (correo === "" || password === "") {
       alert("Por favor, completa todos los campos.");
-      return;
+        return;
     }
 
-    if (!emailRegex.test(correo)) {
-      alert("Por favor, ingresa un correo electrónico válido.");
-      return;
-    }
 
     if (password.length < 8) {
       alert("La contraseña debe tener al menos 8 caracteres.");
-      return;
+        return;
     }
 
-    // Si todo está correcto
-    alert("Inicio de sesión exitoso ✅");
+    // Si todo esta correcto
+    alert("Inicio de sesión exitoso");
     form.reset(); // Limpia el formulario
-  });
-});
+    });
+    });
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("form-registro");
 
   form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    event.preventDefault(); //evita que el formulario se envíe automaticamente
 
     const nombre = form.nombre.value.trim();
     const correo = form.correo.value.trim();
     const password = form.password.value.trim();
 
-    // Validación del nombre
+    // validación del nombre
     if (nombre === "") {
       alert("Por favor, ingresa tu nombre.");
       return;
     }
 
-    // Validación del correo electrónico
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(correo)) {
-      alert("Por favor, ingresa un correo electrónico válido.");
-      return;
-    }
 
-    // Validación de la contraseña
+    // validación de la contraseña
     if (password.length < 8) {
       alert("La contraseña debe tener al menos 8 caracteres.");
       return;
     }
 
-    // Si todo está correcto
-    alert("✅ Registro exitoso. ¡Bienvenido " + nombre + "!");
+    // si todo está correcto
+    alert(" Registro exitoso. ¡Bienvenido " + nombre + "!");
     form.reset(); // Limpia el formulario
-  });
-});
+     });
+    });
